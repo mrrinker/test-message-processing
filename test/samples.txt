@@ -1,0 +1,9 @@
+{"first":"mark", "last":" M"}
+{"first":"mark", "last":"   M"}
+{"first":"mark", "last":""}
+{"first":"mark", "last":" "}
+{"first":"mark", "last":"          "}
+{"first":"mark", "last":"MON-12345678"}
+{"first":"mark"}
+{"last":"MON-12345678"}
+{"last":" "}
