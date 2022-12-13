@@ -14,8 +14,11 @@ class Consumer {
     })
 
     rl.on('line', (line) => {
-      if (line && line.trim().length > 0) {
-        orchestrator.emit(eventName, line)
+      if (line) {
+        const lineTrim = line.trim()
+        if (lineTrim.length > 0) {
+          orchestrator.emit(eventName, lineTrim)
+        }
       }
     })
 
