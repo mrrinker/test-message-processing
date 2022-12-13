@@ -5,7 +5,6 @@ const Transmitter = require('./transmitter')
 const Consumer = require('./consumer')
 
 class Orchestrator extends EventEmitter {
-
   /**
    * Run the orchestration
    */
