@@ -1,14 +1,14 @@
 const schema = {
   type: 'object',
   properties: {
-    first: {$ref: '#/definitions/nonEmptyString'},
-    last: {$ref: '#/definitions/nonEmptyString'}
+    first: { $ref: '#/definitions/nonEmptyString' },
+    last: { $ref: '#/definitions/nonEmptyString' }
   },
   definitions: {
     nonEmptyString: {
-        type: 'string',
-        pattern: '^\\S.*$'
-      }
+      type: 'string',
+      pattern: '^\\S.*$'
+    }
   },
   required: ['first', 'last'],
   additionalProperties: true

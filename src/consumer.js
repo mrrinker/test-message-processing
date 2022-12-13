@@ -1,12 +1,12 @@
 const readline = require('readline')
-const EventEmitter = require('node:events')
 
-class Consumer extends EventEmitter {
+class Consumer {
   /**
-     * Start and consume
-     */
-  start () {
-    console.log('consumer start')
+   * Start consuming
+   * @param {*} orchestrator
+   * @param {*} eventName
+   */
+  consume (orchestrator, eventName) {
     const rl = readline.createInterface({
       input: process.stdin,
       output: process.stdout,
@@ -15,7 +15,7 @@ class Consumer extends EventEmitter {
 
     rl.on('line', (line) => {
       if (line && line.trim().length > 0) {
-        this.emit('validate', line)
+        orchestrator.emit(eventName, line)
       }
     })
 
@@ -25,4 +25,4 @@ class Consumer extends EventEmitter {
   }
 }
 
-module.exports = new Consumer()
+module.exports = Consumer
